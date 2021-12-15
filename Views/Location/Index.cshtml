@@ -1,0 +1,46 @@
+﻿@model IEnumerable<NearMeApp.Models.Locations>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>All Location</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LocationTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Upzilla)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.District)
+        </th>        
+        <th>Action</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LocationTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Upzilla)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.District)
+        </td>
+        
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) 
+        </td>
+    </tr>
+}
+
+</table>

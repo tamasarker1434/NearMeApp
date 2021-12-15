@@ -1,0 +1,19 @@
+﻿@model IEnumerable<NearMeApp.Models.Users>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form method="post" role="form" class="php-email-form">
+    <div class="row no-gutters">
+        <div class="col-md-6 form-group pl-md-1">
+            <input type="text" class="form-control" name="user" id="user" placeholder="User Id" required>
+        </div>
+        <div class="col-md-6 form-group pr-md-1">
+            <input type="text" name="location" class="form-control" id="location" placeholder="Location" required>
+        </div>
+    </div>
+
+    <div class="text-center"><button type="submit">Click for Search</button></div>
+</form>
